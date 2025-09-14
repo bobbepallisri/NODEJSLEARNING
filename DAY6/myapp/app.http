@@ -1,0 +1,19 @@
+POST http://localhost:4000/users/
+content-Type:application/json
+
+{
+    "name":"Kanth",
+    "username":"kanth124",
+    "password":"sri@123",
+    "gender":"Male",
+    "location":"hyderabad"
+}
+
+###
+POST http://localhost:4000/login/
+Content-Type: application/json
+
+{
+    "username":"kanth124",
+    "password":"sri@123"
+}
