@@ -71,7 +71,7 @@ app.post("/login", async (request, response) => {
 
 app.post("/login", async (request, response) => {
   const { username, password } = request.body;
-  const selectUserQuery = `SELECT * FROM user WHERE username = '${username}'`;
+  const selectUserQuery = `SELECT * FROM users WHERE username = '${username}'`;
   const dbUser = await db.get(selectUserQuery);
   if (dbUser === undefined) {
     response.status(400);
@@ -118,4 +118,5 @@ app.get("/books/", (request, response) => {
       }
     });
   }
-});
+}); 
+
